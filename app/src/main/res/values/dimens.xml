@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fontMedium">24</dimen>
+    <dimen name="fontLarge">32</dimen>
+    <dimen name="fontSmall">16</dimen>
+    <dimen name="layoutPadding">16dp</dimen>
+    <dimen name="dashboardCardViewMargins">10dp</dimen>
+    <dimen name="profileViewSize">80dp</dimen>
+</resources>

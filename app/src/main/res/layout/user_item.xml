@@ -1,13 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="user"
             type="com.mdadil2019.medibuddydemo.repo.local.model.User" />
     </data>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/layoutPadding">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAvatar"
+            imageUrl="@{user.links.self.href}"
+            app:civ_border_color="@android:color/black"
+            app:civ_border_width="1dp"
+            android:layout_width="@dimen/profileViewSize"
+            android:layout_height="@dimen/profileViewSize" />
+
+        <TextView
+            android:id="@+id/tvFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/ivAvatar"
+            android:text="@{user.firstName + ` ` + user.lastName}"
+            android:textColor="@color/fontColor"
+            android:textSize="@dimen/fontMedium"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFullName"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/ivAvatar"
+            android:text="@{user.gender}"
+            android:textColor="@color/fontColor"
+            android:textSize="@dimen/fontSmall" />
+
+
+        <TextView
+            android:id="@+id/tvDob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGender"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/ivAvatar"
+            android:text="@{user.dateOfBirth}"
+            android:textColor="@color/fontColor"
+            android:textSize="@dimen/fontSmall" />
+
+
+    </RelativeLayout>
 </layout>
