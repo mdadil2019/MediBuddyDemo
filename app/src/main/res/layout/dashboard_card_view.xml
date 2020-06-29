@@ -5,8 +5,9 @@
     android:padding="@dimen/layoutPadding">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="157dp"
-        android:layout_height="148dp">
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:id="@+id/mainCv">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -18,13 +19,13 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text=""
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textSize="@dimen/fontSmall" />
 
             <TextView
                 android:id="@+id/tvDescriptionCardView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/verySmall"
                 android:layout_below="@+id/tvTitleCardView"
                 android:layout_centerHorizontal="true"
                 android:text="" />

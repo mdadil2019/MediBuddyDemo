@@ -1,5 +1,6 @@
 package com.mdadil2019.medibuddydemo
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.RecyclerView
 import com.mdadil2019.medibuddydemo.adapters.UserAdapter
@@ -8,8 +9,20 @@ import com.mdadil2019.medibuddydemo.repo.local.model.User
 
 class ListFragmentViewModel(private val userRepository: UserRepository) : ViewModel() {
 
+    var isApiRequestSuccess = MutableLiveData<Boolean>()
+    var isDataAvaiable : Boolean = false
     init {
-        userRepository.requestData()
+
+
+        userRepository.getDataAvailability {
+            isDataAvaiable = it ?: false
+            if(!isDataAvaiable){
+                userRepository.requestData{
+                    isApiRequestSuccess.postValue(it)
+                }
+            }
+        }
+
     }
 
     fun setAdapter(recyclerView: RecyclerView){
@@ -19,7 +32,21 @@ class ListFragmentViewModel(private val userRepository: UserRepository) : ViewMo
             it.forEach { user->
                 userAdapter.addUser(user)
             }
+//            if(!it.isEmpty()){
+//                isDataAvailable.postValue(true)
+//            }
             userAdapter.notifyDataSetChanged()
         }
+    }
+
+    fun retry(){
+        userRepository.requestData{
+            isApiRequestSuccess.postValue(it)
+        }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+//        userRepository.onClear()
     }
 }

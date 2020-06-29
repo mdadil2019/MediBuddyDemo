@@ -7,17 +7,17 @@
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
+        android:id="@+id/rlStartupFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/rlStartupFragment">
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:id="@+id/ivLogo"/>
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/logo" />
 
         <TextView
             android:id="@+id/tvTitleStart"
@@ -28,7 +28,7 @@
             android:gravity="center_horizontal"
             android:text="@string/title"
             android:textSize="@dimen/fontMedium"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
 
 
         <TextView
@@ -36,25 +36,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvTitleStart"
-            android:textSize="@dimen/fontSmall"
-            android:text="@string/description"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="25dp"
             android:layout_marginLeft="45dp"
+            android:layout_marginTop="25dp"
             android:layout_marginRight="45dp"
+            android:gravity="center_horizontal"
+            android:text="@string/description"
             android:textColor="#7685A7"
-
-            />
+            android:textSize="@dimen/fontSmall"/>
 
         <Button
+            android:id="@+id/btnStart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnStart"
-            android:text="Get Started"
+            android:layout_alignParentBottom="true"
             android:background="#EDEBEB"
-            android:textColor="#ED6A09"
-            android:layout_alignParentBottom="true"/>
-
+            android:text="Get Started"
+            android:textColor="#ED6A09"/>
 
 
     </RelativeLayout>

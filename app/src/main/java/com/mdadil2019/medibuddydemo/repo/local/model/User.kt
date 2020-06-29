@@ -32,9 +32,9 @@ data class User(
 ){
     data class Links(
         @Embedded
-        val self : Self
+        val avatar : Avatar
     ){
-        data class Self(
+        data class Avatar(
             val href : String
         )
     }

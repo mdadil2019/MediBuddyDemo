@@ -1,9 +1,15 @@
 <resources>
     <string name="app_name">MediBuddyDemo</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title">Online REST API for Testing and Prototyping</string>
     <string name="description">24/7 online fake REST API service for quick testing and prototyping of web and android applications.</string>
     <string name="dashboardTitle">What would you like \nto do?</string>
-    <string name="descriptionCardView">Show all the users</string>
+    <string name="descriptionCvList">Show all the users</string>
+    <string name="titleCvList">List</string>
+    <string name="descriptionCvCreate">Add a new user</string>
+    <string name="titleCvCreate">Create</string>
+    <string name="descriptionCvSearch">Search users from API</string>
+    <string name="titleCvSearch">Search</string>
+    <string name="descriptionCvDelete">Delete user from API</string>
+    <string name="titleCvDelete">Delete</string>
 </resources>
