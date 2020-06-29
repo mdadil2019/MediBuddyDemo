@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.StartupFragment">
+    tools:context=".fragments.StartupFragment"
+    android:background="#FFFFFF">
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
@@ -26,6 +27,8 @@
             android:layout_below="@+id/ivLogo"
             android:layout_marginTop="60dp"
             android:gravity="center_horizontal"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
             android:text="@string/title"
             android:textSize="@dimen/fontMedium"
             android:textStyle="bold"/>
